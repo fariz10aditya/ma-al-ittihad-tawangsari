@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akademik & Jurusan | MA Al-Ittihad Tawangsari Trowulan</title>
+  <meta name="description" content="Program pendidikan, kurikulum madrasah, jurusan MIPA, IPS, Keagamaan, program Tahfidz Al-Qur'an, dan Diniyah Salaf di MA Al-Ittihad Tawangsari.">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              600: '#059669',
+              700: '#047857',
+              800: '#064e3b',
+              900: '#022c22',
+            },
+            gold: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            arabic: ['"Amiri"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-600 selection:text-white">
+
+  <!-- TOP BAR -->
+  <aside class="bg-brand-900 text-emerald-100 text-xs py-2 px-4 border-b border-brand-800">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-4">
+        <span>NPSN: <strong class="text-white">20584241</strong></span>
+        <span>•</span>
+        <span>Akreditasi: <strong class="text-white">B</strong></span>
+        <span>•</span>
+        <span>Kemenag RI - Trowulan Mojokerto</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://wa.me/6285706666126" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400 transition flex items-center gap-1">
+          <i class="fa-brands fa-whatsapp text-emerald-400"></i> Hotline PPDB: 0857-0666-6126
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- NAVBAR -->
+  <header class="site-header sticky top-0 z-40 glass-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/images/logo.svg" alt="Logo MA Al-Ittihad" class="w-12 h-12">
+          <div>
+            <span class="text-[10px] uppercase font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">YPIS AL-ITTIHAD</span>
+            <div class="text-base sm:text-lg font-extrabold text-brand-900 leading-tight">MA AL-ITTIHAD</div>
+            <p class="text-[11px] text-slate-500">Tawangsari • Trowulan</p>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-1">
+          <a href="index.html" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-700 rounded-lg">Beranda</a>
+          <a href="profil.html" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-700 rounded-lg">Profil</a>
+          <a href="akademik.html" class="px-3 py-2 text-sm font-semibold text-emerald-700 bg-emerald-50/80 rounded-lg">Akademik</a>
+          <a href="index.html#ekstrakurikuler" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-700 rounded-lg">Ekstrakurikuler</a>
+          <a href="index.html#fasilitas" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-700 rounded-lg">Fasilitas</a>
+          <a href="berita.html" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-700 rounded-lg">Berita</a>
+          <a href="galeri.html" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-700 rounded-lg">Galeri</a>
+          <a href="kontak.html" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-700 rounded-lg">Kontak</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="ppdb.html" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs px-4 py-2 rounded-xl shadow">
+            <i class="fa-solid fa-user-plus"></i> PPDB Online
+          </a>
+          <button type="button" id="mobileMenuToggle" class="lg:hidden p-2 text-slate-700 hover:text-emerald-700">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobileMenuBackdrop" class="fixed inset-0 bg-black/50 z-50 hidden backdrop-blur-sm"></div>
+  <div id="mobileMenuDrawer" class="fixed top-0 right-0 w-80 max-w-full h-full bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+    <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-emerald-50/50">
+      <span class="font-bold text-sm text-brand-900">MA AL-ITTIHAD</span>
+      <button type="button" id="mobileMenuClose" class="w-8 h-8 rounded-lg bg-white border border-slate-200 text-slate-500">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="p-5 flex-1 overflow-y-auto space-y-1">
+      <a href="index.html" class="block px-3 py-2 text-slate-700 hover:bg-slate-50 rounded-lg font-medium text-sm">Beranda</a>
+      <a href="profil.html" class="block px-3 py-2 text-slate-700 hover:bg-slate-50 rounded-lg font-medium text-sm">Profil & Sejarah</a>
+      <a href="akademik.html" class="block px-3 py-2 text-emerald-800 bg-emerald-50 rounded-lg font-bold text-sm">Akademik & Jurusan</a>
+      <a href="ppdb.html" class="block px-3 py-2 text-slate-700 hover:bg-slate-50 rounded-lg font-medium text-sm">PPDB Online</a>
+      <a href="berita.html" class="block px-3 py-2 text-slate-700 hover:bg-slate-50 rounded-lg font-medium text-sm">Berita</a>
+      <a href="galeri.html" class="block px-3 py-2 text-slate-700 hover:bg-slate-50 rounded-lg font-medium text-sm">Galeri</a>
+      <a href="kontak.html" class="block px-3 py-2 text-slate-700 hover:bg-slate-50 rounded-lg font-medium text-sm">Kontak</a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <section class="bg-pattern-dark text-white py-14 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex items-center gap-2 text-xs text-emerald-300 mb-3">
+        <a href="index.html" class="hover:underline">Beranda</a>
+        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+        <span class="text-white font-medium">Akademik & Kurikulum</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white">Program Akademik & Peminatan</h1>
+      <p class="text-slate-300 text-sm sm:text-base mt-2 max-w-2xl">
+        Integrasi cerdas kurikulum formal Kementerian Agama RI dan tradisi keilmuan pesantren untuk membina generasi yang cerdas dan berakhlak.
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN BODY -->
+  <main class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <!-- 3 JURUSAN DETAIL -->
+      <div>
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest bg-emerald-100 px-3 py-1 rounded-full">
+            STRUKTUR JURUSAN
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-brand-900 mt-2">Pilihan Peminatan Belajar Siswa</h2>
+          <p class="text-slate-600 mt-2 text-sm">
+            Disiapkan untuk memfasilitasi minat dan bakat santri dalam melanjutkan studi ke jenjang perguruan tinggi maupun berkarier.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- MIPA -->
+          <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 card-hover flex flex-col justify-between" id="mipa">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-xl mb-4">
+                <i class="fa-solid fa-atom"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">MIPA (Matematika & IPA)</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Fokus pada penguasaan konsep saintifik, eksperimen laboratorium, analitik matematika, fisika, kimia, dan biologi.
+              </p>
+              
+              <div class="bg-white p-4 rounded-xl border border-slate-200 space-y-2 mb-4 text-xs">
+                <span class="font-bold text-slate-800 block text-[11px] uppercase text-emerald-700">Mata Pelajaran Peminatan:</span>
+                <p>• Matematika Peminatan</p>
+                <p>• Fisika Teori & Praktikum</p>
+                <p>• Kimia Anorganik & Organik</p>
+                <p>• Biologi & Ekosistem</p>
+              </div>
+
+              <div class="text-xs text-slate-500">
+                <strong>Prospek Lulusan:</strong> Kedokteran, Farmasi, Teknik Informatika, Agribisnis, Arsitektur, Sains Murni, Pendidikan Guru IPA.
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-200">
+              <a href="ppdb.html?peminatan=MIPA" class="block text-center bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-bold py-2.5 rounded-xl transition">
+                Daftar Peminatan MIPA
+              </a>
+            </div>
+          </div>
+
+          <!-- IPS -->
+          <div class="bg-slate-50 rounded-3xl p-6 sm:p-8 border border-slate-200 card-hover flex flex-col justify-between" id="ips">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-amber-500 text-white flex items-center justify-center text-xl mb-4">
+                <i class="fa-solid fa-earth-asia"></i>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 mb-2">IPS (Ilmu Pengetahuan Sosial)</h3>
+              <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Mengembangkan kepekaan sosial kemasyarakatan, ekonomi syariah, manajemen bisnis, geografi, dan sosiologi praktis.
+              </p>
+              
+              <div class="bg-white p-4 rounded-xl border border-slate-200 space-y-2 mb-4 text-xs">
+                <span class="font-bold text-slate-800 block text-[11px] uppercase text-amber-700">Mata Pelajaran Peminatan:</span>
+                <p>• Sosiologi Masyarakat</p>
+                <p>• Ekonomi & Akuntansi Keuangan</p>
+                <p>• Geografi & Tata Ruang</p>
+                <p>• Sejarah Peminatan & Kebudayaan</p>
+              </div>
+
+              <div class="text-xs text-slate-500">
+                <strong>Prospek Lulusan:</strong> Ilmu Hukum, Ekonomi Syariah, Akuntansi, Manajemen Bisnis, Ilmu Komunikasi, Administrasi Publik.
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-200">
+              <a href="ppdb.html?peminatan=IPS" class="block text-center bg-amber-600 hover:bg-amber-700 text-white text-xs font-bold py-2.5 rounded-xl transition">
+                Daftar Peminatan IPS
+              </a>
+            </div>
+          </div>
+
+          <!-- KEAGAMAAN -->
+          <div class="bg-brand-900 text-white rounded-3xl p-6 sm:p-8 border border-emerald-700 card-hover flex flex-col justify-between" id="keagamaan">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-gold-400 text-brand-900 flex items-center justify-center text-xl mb-4">
+                <i class="fa-solid fa-book-quran"></i>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-2">Ilmu-Ilmu Keagamaan (IIK)</h3>
+              <p class="text-xs text-emerald-100 leading-relaxed mb-4">
+                Pendalaman menyeluruh khazanah keilmuan Islam, tafsir, hadits, fikih ushul fiqih, gramatika bahasa Arab, dan ilmu kalam.
+              </p>
+              
+              <div class="bg-white/10 p-4 rounded-xl border border-white/10 space-y-2 mb-4 text-xs">
+                <span class="font-bold text-gold-400 block text-[11px] uppercase">Mata Pelajaran Peminatan:</span>
+                <p>• Ilmu Tafsir & Hadits Dirayah</p>
+                <p>• Fiqih & Ushul Fiqih</p>
+                <p>• Bahasa Arab & Balaghah</p>
+                <p>• Akhlaq Tasawuf & Ilmu Kalam</p>
+              </div>
+
+              <div class="text-xs text-emerald-200">
+                <strong>Prospek Lulusan:</strong> Jurusan Studi Islam Universitas Al-Azhar Kairo, UIN/IAIN, Hakim Pengadilan Agama, Guru PAI, Dai.
+              </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-emerald-800">
+              <a href="ppdb.html?peminatan=Keagamaan" class="block text-center bg-gold-500 hover:bg-gold-600 text-brand-900 text-xs font-bold py-2.5 rounded-xl transition">
+                Daftar Peminatan Keagamaan
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PROGRAM TAHFIDZ & KITAB KUNING -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch pt-4">
+        
+        <!-- Tahfidz -->
+        <div class="bg-emerald-50 border border-emerald-200 rounded-3xl p-8" id="tahfidz">
+          <div class="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-kaaba"></i>
+          </div>
+          <h3 class="text-xl font-bold text-brand-900 mb-2">Program Tahfidzul Qur'an Bersanad</h3>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-4">
+            Santri dibimbing langsung oleh dewan asatidz tahfidz Pondok Pesantren Al-Ittihad dengan metode bertahap: Tahsin Tilawah (makharijul huruf & tajwid), Ziyadah (setor hafalan baru setiap hari), serta Takrir & Muraja'ah (menjaga hafalan).
+          </p>
+          <div class="grid grid-cols-2 gap-3 text-xs">
+            <div class="bg-white p-3 rounded-xl border border-emerald-200">
+              <strong class="text-emerald-800 block">Target Minimal:</strong>
+              <p class="text-slate-600 mt-1">Juz 30 (Juz 'Amma) + Surat Pilihan (Al-Waqi'ah, Yasin, Al-Mulk)</p>
+            </div>
+            <div class="bg-white p-3 rounded-xl border border-emerald-200">
+              <strong class="text-emerald-800 block">Target Takhassus:</strong>
+              <p class="text-slate-600 mt-1">Hingga 10 - 30 Juz bagi santri kelas khusus tahfidz pesantren</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diniyah Salaf -->
+        <div class="bg-amber-50 border border-amber-200 rounded-3xl p-8" id="diniyah">
+          <div class="w-12 h-12 rounded-xl bg-amber-600 text-white flex items-center justify-center text-xl mb-4">
+            <i class="fa-solid fa-book"></i>
+          </div>
+          <h3 class="text-xl font-bold text-amber-950 mb-2">Kajian Kitab Kuning (Madrasah Diniyah)</h3>
+          <p class="text-xs sm:text-sm text-slate-700 leading-relaxed mb-4">
+            Menggunakan metode sorogan dan bandongan klasik untuk mentransfer pemahaman kitab-kitab muktabar karya ulama salafus sholih, antara lain:
+          </p>
+          <div class="space-y-2 text-xs text-slate-700 bg-white p-4 rounded-xl border border-amber-200">
+            <p>• <strong>Nahwu & Shorof:</strong> Matan Al-Jurumiyah, Al-Amtsilah At-Tashrifiyyah, Imrithi</p>
+            <p>• <strong>Fiqih Ibadah:</strong> Safinatun Najah, Sullamut Taufiq, Fathul Qorib Al-Mujib</p>
+            <p>• <strong>Akhlaq & Adab:</strong> Ta'limul Muta'allim, Taisirul Kholaq, Bidayatul Hidayah</p>
+            <p>• <strong>Hadits & Tauhid:</strong> Al-Arba'in An-Nawawiyyah, Aqidatul Awwam, Jawahirul Kalamiyyah</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RUNDOWN HARIAN SANTRI -->
+      <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-10">
+        <div class="border-b border-slate-200 pb-4 mb-6">
+          <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest">KEHIDUPAN SANTRI</span>
+          <h2 class="text-2xl font-extrabold text-brand-900 mt-1">Jadwal Harian Santri Asrama (Boarding)</h2>
+          <p class="text-xs text-slate-500">
+            Ritme harian yang teratur untuk membangun kedisiplinan beribadah, menuntut ilmu, dan istirahat yang seimbang.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+          <div class="bg-white p-4 rounded-2xl border border-slate-200">
+            <span class="text-emerald-700 font-extrabold font-mono block text-sm">04.00 - 06.00 WIB</span>
+            <strong class="text-slate-800 block mt-1">Bangun & Subuh Berjama'ah</strong>
+            <p class="text-slate-500 mt-1">Qiyamullail, Shalat Subuh berjama'ah, wirid, setoran tahfidz Al-Qur'an pagi.</p>
+          </div>
+
+          <div class="bg-white p-4 rounded-2xl border border-slate-200">
+            <span class="text-emerald-700 font-extrabold font-mono block text-sm">06.45 - 13.30 WIB</span>
+            <strong class="text-slate-800 block mt-1">Pembelajaran Formal Madrasah</strong>
+            <p class="text-slate-500 mt-1">KBM kurikulum MA di kelas, praktikum lab komputer/IPA, sholat Zhuhur berjama'ah.</p>
+          </div>
+
+          <div class="bg-white p-4 rounded-2xl border border-slate-200">
+            <span class="text-emerald-700 font-extrabold font-mono block text-sm">15.00 - 17.30 WIB</span>
+            <strong class="text-slate-800 block mt-1">Ashar & Ekstrakurikuler</strong>
+            <p class="text-slate-500 mt-1">Shalat Ashar, kegiatan olahraga santri, ekstrakurikuler kepramukaan, rebana/banjari.</p>
+          </div>
+
+          <div class="bg-white p-4 rounded-2xl border border-slate-200">
+            <span class="text-emerald-700 font-extrabold font-mono block text-sm">18.00 - 22.00 WIB</span>
+            <strong class="text-slate-800 block mt-1">Maghrib, Diniyah & Isya'</strong>
+            <p class="text-slate-500 mt-1">Kajian kitab kuning sorogan, sholat Isya', belajar mandiri/tasyji'ul lughah, istirahat malam.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-900 text-slate-300 text-sm py-10 border-t border-brand-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+      <div>
+        <p>&copy; 2026 MA Al-Ittihad Tawangsari Trowulan Mojokerto. NPSN: 20584241.</p>
+      </div>
+      <div class="flex gap-4">
+        <a href="index.html" class="hover:text-emerald-400">Beranda</a>
+        <a href="profil.html" class="hover:text-emerald-400">Profil</a>
+        <a href="ppdb.html" class="hover:text-emerald-400">PPDB Online</a>
+        <a href="kontak.html" class="hover:text-emerald-400">Kontak</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

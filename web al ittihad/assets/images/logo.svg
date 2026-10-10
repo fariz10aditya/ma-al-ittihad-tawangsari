@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#065f46" />
+      <stop offset="50%" stop-color="#047857" />
+      <stop offset="100%" stop-color="#022c22" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Ring (Gold Ornament) -->
+  <circle cx="250" cy="250" r="235" fill="none" stroke="url(#goldGrad)" stroke-width="12" filter="url(#shadow)"/>
+  <circle cx="250" cy="250" r="222" fill="none" stroke="#ffffff" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- Main Background Shield / Circle -->
+  <circle cx="250" cy="250" r="215" fill="url(#emeraldGrad)"/>
+
+  <!-- Inner Concentric Ring -->
+  <circle cx="250" cy="250" r="165" fill="#022c22" stroke="url(#goldGrad)" stroke-width="4"/>
+
+  <!-- Circular Text Path -->
+  <path id="textCircleTop" d="M 65 250 A 185 185 0 0 1 435 250" fill="none"/>
+  <path id="textCircleBottom" d="M 435 250 A 185 185 0 0 1 65 250" fill="none"/>
+
+  <text font-family="'Plus Jakarta Sans', 'Arial', sans-serif" font-size="20" font-weight="800" fill="#fef08a" letter-spacing="3.5">
+    <textPath href="#textCircleTop" startOffset="50%" text-anchor="middle">
+      MADRASAH ALIYAH AL-ITTIHAD
+    </textPath>
+  </text>
+
+  <text font-family="'Plus Jakarta Sans', 'Arial', sans-serif" font-size="16" font-weight="700" fill="#ffffff" letter-spacing="3">
+    <textPath href="#textCircleBottom" startOffset="50%" text-anchor="middle">
+      ★ TAWANGSARI • TROWULAN • MOJOKERTO ★
+    </textPath>
+  </text>
+
+  <!-- Central Emblem Elements -->
+  <!-- Star Burst / Light of Knowledge -->
+  <g transform="translate(250, 160)">
+    <!-- 8-pointed Islamic Star -->
+    <path d="M0 -30 L8 -8 L30 0 L8 8 L0 30 L-8 8 L-30 0 L-8 -8 Z" fill="url(#goldGrad)" />
+    <!-- Crescent Moon -->
+    <path d="M-4 -20 A 24 24 0 1 0 16 12 A 20 20 0 1 1 -4 -20 Z" fill="#ffffff" />
+  </g>
+
+  <!-- Open Quran Book -->
+  <g transform="translate(250, 245)" filter="url(#shadow)">
+    <!-- Book Stand (Rehal) Base -->
+    <path d="M-70 70 L-25 35 L-20 40 L-60 80 Z" fill="#92400e" />
+    <path d="M70 70 L25 35 L20 40 L60 80 Z" fill="#78350f" />
+    <path d="M-25 35 L0 50 L25 35 L0 25 Z" fill="#b45309" />
+
+    <!-- Open Book Pages Left -->
+    <path d="M0 10 C-30 -10 -75 -12 -95 10 C-85 30 -50 40 0 35 Z" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+    <path d="M-85 14 C-65 0 -30 2 -8 18" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round"/>
+    <path d="M-82 22 C-65 8 -30 10 -8 26" fill="none" stroke="#047857" stroke-width="1.5" stroke-linecap="round"/>
+
+    <!-- Open Book Pages Right -->
+    <path d="M0 10 C30 -10 75 -12 95 10 C85 30 50 40 0 35 Z" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+    <path d="M85 14 C65 0 30 2 8 18" fill="none" stroke="#047857" stroke-width="2" stroke-linecap="round"/>
+    <path d="M82 22 C65 8 30 10 8 26" fill="none" stroke="#047857" stroke-width="1.5" stroke-linecap="round"/>
+
+    <!-- Bookmark Ribbon -->
+    <path d="M0 20 L0 50 L-5 45 L-10 50 L-10 20 Z" fill="#dc2626"/>
+  </g>
+
+  <!-- Pena / Feather Quill & Gear of Technology (Integrasi Agama & Iptek) -->
+  <g transform="translate(250, 315)">
+    <!-- Banner for YPIS / Tahun Berdiri -->
+    <rect x="-85" y="-12" width="170" height="24" rx="12" fill="url(#goldGrad)" stroke="#ffffff" stroke-width="1.5"/>
+    <text x="0" y="5" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="#022c22" text-anchor="middle" letter-spacing="1.5">
+      TERAKREDITASI B • NPSN 20584241
+    </text>
+  </g>
+
+  <!-- Rice & Cotton Wreath (Kemakmuran & Pendidikan) -->
+  <g stroke="url(#goldGrad)" stroke-width="2" fill="none">
+    <!-- Left Wreath Leaf Dots -->
+    <circle cx="115" cy="220" r="4" fill="url(#goldGrad)"/>
+    <circle cx="110" cy="245" r="4" fill="url(#goldGrad)"/>
+    <circle cx="112" cy="270" r="4" fill="url(#goldGrad)"/>
+    <circle cx="120" cy="295" r="4" fill="url(#goldGrad)"/>
+    <!-- Right Wreath Leaf Dots -->
+    <circle cx="385" cy="220" r="4" fill="url(#goldGrad)"/>
+    <circle cx="390" cy="245" r="4" fill="url(#goldGrad)"/>
+    <circle cx="388" cy="270" r="4" fill="url(#goldGrad)"/>
+    <circle cx="380" cy="295" r="4" fill="url(#goldGrad)"/>
+  </g>
+</svg>

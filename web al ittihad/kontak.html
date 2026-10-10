@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak & Lokasi | MA Al-Ittihad Tawangsari Trowulan</title>
+  <meta name="description" content="Informasi kontak resmi, alamat kampus, layanan WhatsApp panitia, dan peta lokasi MA Al-Ittihad Tawangsari Trowulan Mojokerto.">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              600: '#059669',
+              700: '#047857',
+              800: '#064e3b',
+              900: '#022c22',
+            },
+            gold: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            arabic: ['"Amiri"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-600 selection:text-white">
+
+  <!-- TOP BAR -->
+  <aside class="bg-brand-900 text-emerald-100 text-xs py-2 px-4 border-b border-brand-800">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-4">
+        <span>NPSN: <strong class="text-white">20584241</strong></span>
+        <span>•</span>
+        <span>Akreditasi: <strong class="text-white">B</strong></span>
+        <span>•</span>
+        <span>Tawangsari, Trowulan, Mojokerto</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://wa.me/6285706666126" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400 transition flex items-center gap-1">
+          <i class="fa-brands fa-whatsapp text-emerald-400"></i> CS WhatsApp: 0857-0666-6126
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- NAVBAR -->
+  <header class="site-header sticky top-0 z-40 glass-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/images/logo.svg" alt="Logo MA Al-Ittihad" class="w-12 h-12">
+          <div>
+            <span class="text-[10px] uppercase font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">YPIS AL-ITTIHAD</span>
+            <div class="text-base sm:text-lg font-extrabold text-brand-900 leading-tight">MA AL-ITTIHAD</div>
+            <p class="text-[11px] text-slate-500">Tawangsari • Trowulan</p>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-1">
+          <a href="index.html" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-700 rounded-lg">Beranda</a>
+          <a href="profil.html" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-700 rounded-lg">Profil</a>
+          <a href="akademik.html" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-700 rounded-lg">Akademik</a>
+          <a href="index.html#ekstrakurikuler" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-700 rounded-lg">Ekstrakurikuler</a>
+          <a href="index.html#fasilitas" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-700 rounded-lg">Fasilitas</a>
+          <a href="berita.html" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-700 rounded-lg">Berita</a>
+          <a href="galeri.html" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-700 rounded-lg">Galeri</a>
+          <a href="kontak.html" class="px-3 py-2 text-sm font-semibold text-emerald-700 bg-emerald-50/80 rounded-lg">Kontak</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="ppdb.html" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs px-4 py-2 rounded-xl shadow">
+            <i class="fa-solid fa-user-plus"></i> PPDB Online
+          </a>
+          <button type="button" id="mobileMenuToggle" class="lg:hidden p-2 text-slate-700 hover:text-emerald-700">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobileMenuBackdrop" class="fixed inset-0 bg-black/50 z-50 hidden backdrop-blur-sm"></div>
+  <div id="mobileMenuDrawer" class="fixed top-0 right-0 w-80 max-w-full h-full bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+    <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-emerald-50/50">
+      <span class="font-bold text-sm text-brand-900">MA AL-ITTIHAD</span>
+      <button type="button" id="mobileMenuClose" class="w-8 h-8 rounded-lg bg-white border border-slate-200 text-slate-500">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="p-5 flex-1 overflow-y-auto space-y-1">
+      <a href="index.html" class="block px-3 py-2 text-slate-700 hover:bg-slate-50 rounded-lg font-medium text-sm">Beranda</a>
+      <a href="profil.html" class="block px-3 py-2 text-slate-700 hover:bg-slate-50 rounded-lg font-medium text-sm">Profil & Sejarah</a>
+      <a href="akademik.html" class="block px-3 py-2 text-slate-700 hover:bg-slate-50 rounded-lg font-medium text-sm">Akademik</a>
+      <a href="ppdb.html" class="block px-3 py-2 text-slate-700 hover:bg-slate-50 rounded-lg font-medium text-sm">PPDB Online</a>
+      <a href="berita.html" class="block px-3 py-2 text-slate-700 hover:bg-slate-50 rounded-lg font-medium text-sm">Berita</a>
+      <a href="galeri.html" class="block px-3 py-2 text-slate-700 hover:bg-slate-50 rounded-lg font-medium text-sm">Galeri</a>
+      <a href="kontak.html" class="block px-3 py-2 text-emerald-800 bg-emerald-50 rounded-lg font-bold text-sm">Kontak & Peta</a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <section class="bg-pattern-dark text-white py-14 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex items-center gap-2 text-xs text-emerald-300 mb-3">
+        <a href="index.html" class="hover:underline">Beranda</a>
+        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+        <span class="text-white font-medium">Kontak & Lokasi</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white">Hubungi & Kunjungi Kampus Kami</h1>
+      <p class="text-slate-300 text-sm sm:text-base mt-2 max-w-2xl">
+        Sekretariat MA Al-Ittihad Tawangsari terbuka melayani informasi pendidikan, konsultasi wali santri, dan pendaftaran santri baru.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- INFO & FORM KIRI -->
+        <div class="lg:col-span-5 space-y-8">
+          
+          <div class="space-y-4">
+            <span class="text-xs font-bold text-emerald-700 uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+              PUSAT INFORMASI
+            </span>
+            <h2 class="text-2xl font-extrabold text-brand-900">Sekretariat MA Al-Ittihad</h2>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Silakan menghubungi kami melalui saluran komunikasi resmi di bawah ini atau berkunjung langsung ke kampus madrasah pada jam kerja.
+            </p>
+          </div>
+
+          <div class="space-y-4 text-xs sm:text-sm">
+            
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-map-location-dot"></i>
+              </div>
+              <div>
+                <strong class="text-slate-900 block">Alamat Madrasah:</strong>
+                <p class="text-slate-600 mt-0.5">
+                  Jl. Raden Wijaya No. 105, Dusun Tawangsari, Desa Tawangsari, Kecamatan Trowulan, Kabupaten Mojokerto, Jawa Timur 61362
+                </p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+              </div>
+              <div>
+                <strong class="text-slate-900 block">WhatsApp Resmi:</strong>
+                <a href="https://wa.me/6285706666126" target="_blank" rel="noopener noreferrer" class="text-emerald-700 font-bold hover:underline">
+                  +62 857-0666-6126
+                </a>
+                <p class="text-[11px] text-slate-500 mt-0.5">Layanan chat konsultasi PPDB dan administrasi madrasah</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
+                <i class="fa-regular fa-envelope"></i>
+              </div>
+              <div>
+                <strong class="text-slate-900 block">Email Resmi:</strong>
+                <a href="mailto:maalit2000@gmail.com" class="text-emerald-700 hover:underline">
+                  maalit2000@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex items-start gap-3">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0">
+                <i class="fa-regular fa-clock"></i>
+              </div>
+              <div>
+                <strong class="text-slate-900 block">Jam Operasional Layanan:</strong>
+                <p class="text-slate-600">Sabtu s/d Kamis: 07.30 - 14.30 WIB</p>
+                <p class="text-slate-400 text-[11px]">Hari Jum'at dan Libur Nasional Tutup</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Quick WhatsApp Topics -->
+          <div class="p-5 rounded-2xl bg-emerald-50 border border-emerald-200 space-y-3">
+            <h3 class="text-xs font-bold text-emerald-900 uppercase tracking-wider">Kirim Pesan Cepat via WhatsApp:</h3>
+            <div class="grid grid-cols-2 gap-2 text-xs">
+              <button onclick="window.openQuickWa('ppdb')" class="p-2 bg-white rounded-lg border border-emerald-200 hover:bg-emerald-100 font-medium text-emerald-800 text-left transition">
+                <i class="fa-solid fa-graduation-cap text-emerald-600 mr-1"></i> Tanya PPDB
+              </button>
+              <button onclick="window.openQuickWa('tahfidz')" class="p-2 bg-white rounded-lg border border-emerald-200 hover:bg-emerald-100 font-medium text-emerald-800 text-left transition">
+                <i class="fa-solid fa-book-quran text-emerald-600 mr-1"></i> Program Tahfidz
+              </button>
+              <button onclick="window.openQuickWa('asrama')" class="p-2 bg-white rounded-lg border border-emerald-200 hover:bg-emerald-100 font-medium text-emerald-800 text-left transition">
+                <i class="fa-solid fa-bed text-emerald-600 mr-1"></i> Info Asrama
+              </button>
+              <button onclick="window.openQuickWa('lokasi')" class="p-2 bg-white rounded-lg border border-emerald-200 hover:bg-emerald-100 font-medium text-emerald-800 text-left transition">
+                <i class="fa-solid fa-map text-emerald-600 mr-1"></i> Petunjuk Arah
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- PETA GOOGLE MAPS KANAN -->
+        <div class="lg:col-span-7 flex flex-col space-y-4">
+          <div class="bg-white rounded-3xl overflow-hidden border border-slate-200 shadow-xl flex-1 flex flex-col min-h-[480px]">
+            
+            <div class="p-4 bg-emerald-900 text-white flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs">
+              <span class="flex items-center gap-2">
+                <i class="fa-solid fa-location-crosshairs text-gold-400"></i>
+                <strong>Titik Koordinat:</strong> -7.5118452, 112.3838882 (Tawangsari, Trowulan)
+              </span>
+              <a href="https://maps.app.goo.gl/MxdgsESSReQPp4oW8" target="_blank" rel="noopener noreferrer" 
+                 class="inline-flex items-center gap-1.5 bg-amber-500 hover:bg-amber-600 text-brand-900 font-bold px-3 py-1.5 rounded-lg transition w-fit">
+                <span>Buka di Google Maps App</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+
+            <div class="flex-1 w-full h-full min-h-[420px]">
+              <iframe 
+                src="https://maps.google.com/maps?q=-7.5118452,112.3838882&hl=id&z=17&output=embed" 
+                class="w-full h-full border-0 min-h-[420px]" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Peta MA AL ITTIHAD TAWANGSARI">
+              </iframe>
+            </div>
+
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-600">
+            <strong>Petunjuk Transportasi:</strong> Dari perempatan Trowulan / Museum Majapahit, ikuti jalan ke arah Desa Tawangsari menuju Jl. Raden Wijaya No. 105. Lokasi madrasah terintegrasi dengan kompleks Pondok Pesantren Al-Ittihad.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-900 text-slate-300 text-sm py-10 border-t border-brand-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+      <div>
+        <p>&copy; 2026 MA Al-Ittihad Tawangsari Trowulan Mojokerto. NPSN: 20584241.</p>
+      </div>
+      <div class="flex gap-4">
+        <a href="index.html" class="hover:text-emerald-400">Beranda</a>
+        <a href="profil.html" class="hover:text-emerald-400">Profil</a>
+        <a href="ppdb.html" class="hover:text-emerald-400">PPDB Online</a>
+        <a href="kontak.html" class="hover:text-emerald-400">Kontak</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kabar & Prestasi | MA Al-Ittihad Tawangsari Trowulan</title>
+  <meta name="description" content="Kumpulan berita kegiatan, prestasi siswa, dan agenda resmi MA Al-Ittihad Tawangsari Trowulan Mojokerto. NPSN: 20584241.">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              600: '#059669',
+              700: '#047857',
+              800: '#064e3b',
+              900: '#022c22',
+            },
+            gold: {
+              400: '#fbbf24',
+              500: '#f59e0b',
+              600: '#d97706',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            arabic: ['"Amiri"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-emerald-600 selection:text-white">
+
+  <!-- TOP BAR -->
+  <aside class="bg-brand-900 text-emerald-100 text-xs py-2 px-4 border-b border-brand-800">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-4">
+        <span>NPSN: <strong class="text-white">20584241</strong></span>
+        <span>•</span>
+        <span>Akreditasi: <strong class="text-white">B</strong></span>
+        <span>•</span>
+        <span>Kemenag RI - Trowulan Mojokerto</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://wa.me/6285706666126" target="_blank" rel="noopener noreferrer" class="hover:text-gold-400 transition flex items-center gap-1">
+          <i class="fa-brands fa-whatsapp text-emerald-400"></i> Hubungi Kami: 0857-0666-6126
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- NAVBAR -->
+  <header class="site-header sticky top-0 z-40 glass-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/images/logo.svg" alt="Logo MA Al-Ittihad" class="w-12 h-12">
+          <div>
+            <span class="text-[10px] uppercase font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">YPIS AL-ITTIHAD</span>
+            <div class="text-base sm:text-lg font-extrabold text-brand-900 leading-tight">MA AL-ITTIHAD</div>
+            <p class="text-[11px] text-slate-500">Tawangsari • Trowulan</p>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-1">
+          <a href="index.html" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-700 rounded-lg">Beranda</a>
+          <a href="profil.html" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-700 rounded-lg">Profil</a>
+          <a href="akademik.html" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-700 rounded-lg">Akademik</a>
+          <a href="index.html#ekstrakurikuler" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-700 rounded-lg">Ekstrakurikuler</a>
+          <a href="index.html#fasilitas" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-700 rounded-lg">Fasilitas</a>
+          <a href="berita.html" class="px-3 py-2 text-sm font-semibold text-emerald-700 bg-emerald-50/80 rounded-lg">Berita</a>
+          <a href="galeri.html" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-700 rounded-lg">Galeri</a>
+          <a href="kontak.html" class="px-3 py-2 text-sm font-medium text-slate-700 hover:text-emerald-700 rounded-lg">Kontak</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a href="ppdb.html" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs px-4 py-2 rounded-xl shadow">
+            <i class="fa-solid fa-user-plus"></i> PPDB Online
+          </a>
+          <button type="button" id="mobileMenuToggle" class="lg:hidden p-2 text-slate-700 hover:text-emerald-700">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE DRAWER -->
+  <div id="mobileMenuBackdrop" class="fixed inset-0 bg-black/50 z-50 hidden backdrop-blur-sm"></div>
+  <div id="mobileMenuDrawer" class="fixed top-0 right-0 w-80 max-w-full h-full bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+    <div class="p-5 border-b border-slate-100 flex items-center justify-between bg-emerald-50/50">
+      <span class="font-bold text-sm text-brand-900">MA AL-ITTIHAD</span>
+      <button type="button" id="mobileMenuClose" class="w-8 h-8 rounded-lg bg-white border border-slate-200 text-slate-500">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="p-5 flex-1 overflow-y-auto space-y-1">
+      <a href="index.html" class="block px-3 py-2 text-slate-700 hover:bg-slate-50 rounded-lg font-medium text-sm">Beranda</a>
+      <a href="profil.html" class="block px-3 py-2 text-slate-700 hover:bg-slate-50 rounded-lg font-medium text-sm">Profil & Sejarah</a>
+      <a href="akademik.html" class="block px-3 py-2 text-slate-700 hover:bg-slate-50 rounded-lg font-medium text-sm">Akademik</a>
+      <a href="ppdb.html" class="block px-3 py-2 text-slate-700 hover:bg-slate-50 rounded-lg font-medium text-sm">PPDB Online</a>
+      <a href="berita.html" class="block px-3 py-2 text-emerald-800 bg-emerald-50 rounded-lg font-bold text-sm">Berita & Prestasi</a>
+      <a href="galeri.html" class="block px-3 py-2 text-slate-700 hover:bg-slate-50 rounded-lg font-medium text-sm">Galeri</a>
+      <a href="kontak.html" class="block px-3 py-2 text-slate-700 hover:bg-slate-50 rounded-lg font-medium text-sm">Kontak</a>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <section class="bg-pattern-dark text-white py-14 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="flex items-center gap-2 text-xs text-emerald-300 mb-3">
+        <a href="index.html" class="hover:underline">Beranda</a>
+        <i class="fa-solid fa-chevron-right text-[10px]"></i>
+        <span class="text-white font-medium">Kabar & Prestasi</span>
+      </div>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-white">Warta & Prestasi Madrasah</h1>
+      <p class="text-slate-300 text-sm sm:text-base mt-2 max-w-2xl">
+        Informasi kegiatan teraktual, prestasi kejuaraan santri, serta kalender agenda MA Al-Ittihad Tawangsari.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <main class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- GRID BERITA -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- 1. Lomba Cipta Menu -->
+        <article class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 card-hover flex flex-col justify-between" id="prestasi-menu">
+          <div>
+            <div class="h-48 bg-gradient-to-tr from-emerald-800 to-emerald-600 p-6 flex flex-col justify-between text-white relative">
+              <span class="inline-block bg-amber-500 text-brand-900 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase w-fit">
+                Prestasi Vokasi
+              </span>
+              <div>
+                <span class="text-xs text-emerald-200"><i class="fa-solid fa-calendar-day mr-1"></i> Prestasi Kabupaten</span>
+                <h3 class="font-bold text-white text-base leading-snug mt-1">
+                  Siswa MA Al-Ittihad Tawangsari Raih Juara Lomba Cipta Menu Masak Ikan Tingkat Kabupaten Mojokerto
+                </h3>
+              </div>
+            </div>
+            <div class="p-6 text-xs text-slate-600 leading-relaxed">
+              Tim santri vokasi tata boga MA Al-Ittihad berhasil mengharumkan madrasah dengan kreasi menu kuliner olahan ikan bergizi tinggi dan inovatif, mengalahkan puluhan sekolah peserta lainnya dalam kompetisi tingkat Kabupaten Mojokerto.
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <span class="text-emerald-700 text-xs font-bold flex items-center gap-1">
+              <i class="fa-solid fa-medal text-gold-500"></i> Prestasi Terverifikasi
+            </span>
+          </div>
+        </article>
+
+        <!-- 2. Lomba Cipta Puisi -->
+        <article class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 card-hover flex flex-col justify-between" id="prestasi-puisi">
+          <div>
+            <div class="h-48 bg-gradient-to-tr from-amber-700 to-amber-500 p-6 flex flex-col justify-between text-white relative">
+              <span class="inline-block bg-white text-brand-900 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase w-fit">
+                Seni & Sastra
+              </span>
+              <div>
+                <span class="text-xs text-amber-100"><i class="fa-solid fa-calendar-day mr-1"></i> Prestasi Pelajar</span>
+                <h3 class="font-bold text-white text-base leading-snug mt-1">
+                  Santri MA Al-Ittihad Raih Juara Lomba Menulis Puisi Tingkat Kabupaten Mojokerto
+                </h3>
+              </div>
+            </div>
+            <div class="p-6 text-xs text-slate-600 leading-relaxed">
+              Karya sastra puitis santri yang mengangkat tema kearifan lokal Trowulan dan kecintaan pada Rasulullah SAW sukses memukau dewan juri, membuktikan daya saing literasi santri madrasah berbasis pesantren.
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <span class="text-amber-700 text-xs font-bold flex items-center gap-1">
+              <i class="fa-solid fa-pen-nib text-amber-600"></i> Sanggar Teater & Sastra
+            </span>
+          </div>
+        </article>
+
+        <!-- 3. Haflah Wisuda Tahfidz -->
+        <article class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 card-hover flex flex-col justify-between" id="wisuda-tahfidz">
+          <div>
+            <div class="h-48 bg-gradient-to-tr from-brand-900 to-emerald-800 p-6 flex flex-col justify-between text-white relative">
+              <span class="inline-block bg-emerald-500 text-white text-[11px] font-extrabold px-3 py-1 rounded-full uppercase w-fit">
+                Tahfidz Qur'an
+              </span>
+              <div>
+                <span class="text-xs text-emerald-200"><i class="fa-solid fa-calendar-day mr-1"></i> Agenda Pesantren</span>
+                <h3 class="font-bold text-white text-base leading-snug mt-1">
+                  Haflah Khotmil Qur'an & Wisuda Santri Ponpes Al-Ittihad Tawangsari
+                </h3>
+              </div>
+            </div>
+            <div class="p-6 text-xs text-slate-600 leading-relaxed">
+              Sebanyak puluhan santri dikukuhkan setelah menuntaskan hafalan Al-Qur'an dan ujian sanad di hadapan para masyayikh, disaksikan dengan haru oleh para wali santri dan tokoh masyarakat Trowulan.
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <span class="text-emerald-700 text-xs font-bold flex items-center gap-1">
+              <i class="fa-solid fa-quran text-emerald-600"></i> Syahadah Tahfidz
+            </span>
+          </div>
+        </article>
+
+        <!-- 4. ANBK & Digitalisasi -->
+        <article class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 card-hover flex flex-col justify-between">
+          <div>
+            <div class="h-48 bg-gradient-to-tr from-slate-800 to-slate-700 p-6 flex flex-col justify-between text-white relative">
+              <span class="inline-block bg-blue-500 text-white text-[11px] font-extrabold px-3 py-1 rounded-full uppercase w-fit">
+                Akademik
+              </span>
+              <div>
+                <span class="text-xs text-slate-300"><i class="fa-solid fa-calendar-day mr-1"></i> Kemenag RI</span>
+                <h3 class="font-bold text-white text-base leading-snug mt-1">
+                  Kelancaran Pelaksanaan Asesmen Nasional Berbasis Komputer (ANBK) Madrasah
+                </h3>
+              </div>
+            </div>
+            <div class="p-6 text-xs text-slate-600 leading-relaxed">
+              Dengan dukungan laboratorium komputer dan sarana jaringan internet memadai, pelaksanaan ANBK dan Asesmen Bakat Minat di MA Al-Ittihad berlangsung lancar dan tertib.
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <span class="text-slate-700 text-xs font-bold flex items-center gap-1">
+              <i class="fa-solid fa-desktop text-blue-600"></i> Lab Komputer Madrasah
+            </span>
+          </div>
+        </article>
+
+        <!-- 5. Hari Santri Nasional -->
+        <article class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 card-hover flex flex-col justify-between">
+          <div>
+            <div class="h-48 bg-gradient-to-tr from-emerald-900 to-emerald-700 p-6 flex flex-col justify-between text-white relative">
+              <span class="inline-block bg-emerald-400 text-brand-900 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase w-fit">
+                Peringatan PHBI
+              </span>
+              <div>
+                <span class="text-xs text-emerald-200"><i class="fa-solid fa-calendar-day mr-1"></i> Apel Akbar</span>
+                <h3 class="font-bold text-white text-base leading-snug mt-1">
+                  Semarak Peringatan Hari Santri Nasional Santri Al-Ittihad Tawangsari
+                </h3>
+              </div>
+            </div>
+            <div class="p-6 text-xs text-slate-600 leading-relaxed">
+              Apel bendera mengenakan sarung dan peci hitam, kirab santri, dan pembacaan Resolusi Jihad NU meneguhkan komitmen santri menjaga keutuhan NKRI dan keluhuran moral bangsa.
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <span class="text-emerald-700 text-xs font-bold flex items-center gap-1">
+              <i class="fa-solid fa-flag text-emerald-600"></i> Nasionalisme Santri
+            </span>
+          </div>
+        </article>
+
+        <!-- 6. Pelantikan IPNU-IPPNU -->
+        <article class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 card-hover flex flex-col justify-between">
+          <div>
+            <div class="h-48 bg-gradient-to-tr from-brand-800 to-slate-800 p-6 flex flex-col justify-between text-white relative">
+              <span class="inline-block bg-gold-500 text-brand-900 text-[11px] font-extrabold px-3 py-1 rounded-full uppercase w-fit">
+                Organisasi Pelajar
+              </span>
+              <div>
+                <span class="text-xs text-emerald-300"><i class="fa-solid fa-calendar-day mr-1"></i> Kaderisasi</span>
+                <h3 class="font-bold text-white text-base leading-snug mt-1">
+                  Pelantikan Pengurus PK IPNU - IPPNU MA Al-Ittihad Masa Khidmat Baru
+                </h3>
+              </div>
+            </div>
+            <div class="p-6 text-xs text-slate-600 leading-relaxed">
+              Melahirkan kader-kader muda yang militan dalam berorganisasi, mencintai ilmu, dan siap mengabdi untuk kemajuan agama, bangsa, dan masyarakat sekitar.
+            </div>
+          </div>
+          <div class="p-6 pt-0">
+            <span class="text-emerald-700 text-xs font-bold flex items-center gap-1">
+              <i class="fa-solid fa-users text-emerald-600"></i> Pimpinan Komisariat
+            </span>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-900 text-slate-300 text-sm py-10 border-t border-brand-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-4 text-xs">
+      <div>
+        <p>&copy; 2026 MA Al-Ittihad Tawangsari Trowulan Mojokerto. NPSN: 20584241.</p>
+      </div>
+      <div class="flex gap-4">
+        <a href="index.html" class="hover:text-emerald-400">Beranda</a>
+        <a href="profil.html" class="hover:text-emerald-400">Profil</a>
+        <a href="ppdb.html" class="hover:text-emerald-400">PPDB Online</a>
+        <a href="kontak.html" class="hover:text-emerald-400">Kontak</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
